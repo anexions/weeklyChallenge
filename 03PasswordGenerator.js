@@ -8,7 +8,7 @@
  * (Pudiendo combinar todos estos parámetros entre ellos)
  */
 
-const generarPassword = (longitud, mayusculas, numeros, simbolos) => {
+const generarPassword = (longitud = 8, mayusculas = false, numeros = false, simbolos = false) => {
     let password = "";
     const caracteres = "abcdefghijklmnopqrstuvwxyz";
     const caracteresMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -41,3 +41,4 @@ console.log(generarPassword(8, false, true, true)); // Solo letras minúsculas, 
 console.log(generarPassword(8, true, false, true)); // Letras (minúsculas + mayúsculas) y símbolos
 console.log(generarPassword(8, true, true, false)); // Letras (minúsculas + mayúsculas) y números
 console.log(generarPassword(8, false, false, true)); // Solo letras minúsculas y símbolos
+console.log(generarPassword());
